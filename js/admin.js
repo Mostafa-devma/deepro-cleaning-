@@ -8,6 +8,9 @@ const esc=s=>String(s??'').replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(
 const norm=s=>String(s||'').replace(/[ً-ْ]/g,'').replace(/[أإآ]/g,'ا').replace(/ة/g,'ه').replace(/ى/g,'ي').toLowerCase().trim();
 const CAN_WRITE='showDirectoryPicker' in window;
 const IMG_EXT=/\.(jpe?g|png|webp|gif|avif)$/i;
+// on the published site (/admin) saving goes through /api/admin to GitHub; opened from the folder it writes files directly
+const ONLINE=location.protocol!=='file:'&&!new URLSearchParams(location.search).has('local');
+let password='';
 
 let data=JSON.parse(JSON.stringify(categories));   // working copy
 let saved=JSON.stringify(data);                     // last saved state
@@ -46,6 +49,11 @@ function render(){
   renderStatus();renderStats();renderCats();renderHead();renderList();
 }
 function renderStatus(){
+  if(ONLINE){
+    $('#status').classList.toggle('ok',!!password);
+    $('#status-text').textContent=password?'متصل بالموقع المنشور':'مش داخل';
+    $('#banner').hidden=true;return;
+  }
   const st=$('#status');st.classList.toggle('ok',!!root);
   $('#status-text').textContent=root?'مربوط بمجلد «'+root.name+'»':'مش مربوط بمجلد';
   const banner=$('#banner');
@@ -236,6 +244,8 @@ async function save(){
   const before=JSON.parse(saved).map(c=>c.id),after=data.map(c=>c.id);
   const added=after.filter(id=>!before.includes(id)),removed=before.filter(id=>!after.includes(id));
   const used=usedImages(),newImages=[...pending].filter(([p])=>used.has(p));
+  const kept=after.filter(x=>before.includes(x));
+  if(ONLINE)return saveOnline(newImages,added,removed,kept);
   if(root&&!(await ensurePermission()))root=null;
   if(!root){
     if(CAN_WRITE){await connect();if(!root)return}
@@ -250,13 +260,9 @@ async function save(){
     if(added.length){
       // copy any existing category page as the template for the new one
       let tpl=null;
-      for(const id of [...after.filter(x=>before.includes(x)),...removed]){try{tpl=await (await (await root.getFileHandle(`catalog-${id}.html`)).getFile()).text();break}catch(e){}}
+      for(const id of [...kept,...removed]){try{tpl=await (await (await root.getFileHandle(`catalog-${id}.html`)).getFile()).text();break}catch(e){}}
       if(!tpl)missingPages=added;
-      else for(const id of added){
-        const c=data[catIndex(id)];
-        const html=tpl.replace(/data-category="[^"]*"/,`data-category="${id}"`).replace(/<title>[^<]*<\/title>/,`<title>${esc(c.title)} — DeepPro</title>`).replace(/(<meta name="description" content=")[^"]*/,`$1${esc(c.description||c.title)}`);
-        await writeFile(root,`catalog-${id}.html`,html);
-      }
+      else for(const id of added)await writeFile(root,`catalog-${id}.html`,categoryPage(tpl,id));
     }
     for(const id of removed){try{await root.removeEntry(`catalog-${id}.html`)}catch(e){}}
     newImages.forEach(([p])=>pending.delete(p));
@@ -268,6 +274,91 @@ async function save(){
     toast('ما قدرنا نحفظ: '+(err.message||err)+'. تأكّد إنك اخترت مجلد الموقع الصح.');
   }
 }
+function categoryPage(tpl,id){
+  const c=data[catIndex(id)];
+  return tpl.replace(/data-category="[^"]*"/,`data-category="${id}"`).replace(/<title>[^<]*<\/title>/,`<title>${esc(c.title)} — DeepPro</title>`).replace(/(<meta name="description" content=")[^"]*/,`$1${esc(c.description||c.title)}`);
+}
+
+/* ---------- online mode: password login + saving through /api/admin ---------- */
+async function api(action,payload={}){
+  const r=await fetch('/api/admin',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({action,password,...payload})});
+  const j=await r.json().catch(()=>({}));
+  if(!r.ok){const e=new Error(j.error||'HTTP '+r.status);e.code=j.code||(r.status===404?'no_api':'http_'+r.status);throw e}
+  return j;
+}
+const toBase64=blob=>new Promise((res,rej)=>{const fr=new FileReader();fr.onload=()=>res(String(fr.result).split(',')[1]);fr.onerror=()=>rej(fr.error);fr.readAsDataURL(blob)});
+const ERRORS={
+  bad_password:'كلمة السر غلط.',
+  not_configured:'لوحة التحكم مش مفعّلة بعد: لازم تزيد ADMIN_PASSWORD وGITHUB_TOKEN بإعدادات المشروع على Vercel، وبعدين تعمل Redeploy.',
+  github_auth:'GitHub رفض الحفظ: الـ GITHUB_TOKEN غلط، انتهت صلاحيته، أو ما إلو صلاحية «Contents: Read and write» على الـ repo.',
+  github_repo:'ما لقينا الـ repo على GitHub. تأكّد من GITHUB_REPO أو صلاحيات الـ token.',
+  no_api:'ما لقينا خدمة الحفظ (/api/admin). تأكّد إن الموقع منشور على Vercel مع مجلد api.'
+};
+const errorText=err=>ERRORS[err.code]||('ما قدرنا نكمّل: '+err.message);
+function storeGet(){try{return sessionStorage.getItem('deeppro-admin')||localStorage.getItem('deeppro-admin')||''}catch(e){return ''}}
+function storeSet(v,remember){try{sessionStorage.removeItem('deeppro-admin');localStorage.removeItem('deeppro-admin');if(v)(remember?localStorage:sessionStorage).setItem('deeppro-admin',v)}catch(e){}}
+function showLogin(msg){
+  password='';document.body.classList.remove('loading');render();
+  $('#login').hidden=false;const err=$('#login-err');err.hidden=!msg;err.textContent=msg||'';
+  setTimeout(()=>$('#login-form').elements.password.focus(),30);
+}
+async function loadOnline(){
+  const {text,assets:list}=await api('load');
+  data=JSON.parse(text.slice(text.indexOf('['),text.lastIndexOf(']')+1));
+  saved=JSON.stringify(data);undoStack.length=0;
+  if(current&&catIndex(current)<0)current=null;
+  assets=(list||[]).filter(a=>IMG_EXT.test(a)&&!/logo/i.test(a));
+  collectAssets();$('#login').hidden=true;document.body.classList.remove('loading');render();
+}
+async function initOnline(){
+  document.body.classList.add('loading'); // hide the deployed copy until the latest data arrives from GitHub
+  $('#connect').hidden=true;$('#logout').hidden=false;
+  $('#help-steps').innerHTML='<li>عدّل، زيد أو احذف المنتجات والأقسام.</li><li>اضغط «حفظ». التعديلات بتنحفظ على GitHub.</li><li>Vercel بيحدّث الموقع خلال دقيقة تقريبًا.</li>';
+  const stored=storeGet();
+  if(stored){password=stored;try{await loadOnline();return}catch(err){storeSet('');return showLogin(err.code==='bad_password'?'':errorText(err))}}
+  showLogin();
+}
+$('#login-form').addEventListener('submit',async e=>{
+  e.preventDefault();
+  const f=e.target.elements,btn=$('button[type=submit]',e.target);
+  password=f.password.value;if(!password)return;
+  btn.disabled=true;btn.textContent='عم نتحقّق…';
+  try{
+    await api('check');storeSet(password,f.remember.checked);
+    // signing in again mid-session keeps the unsaved edits instead of reloading from GitHub
+    if(isDirty()){$('#login').hidden=true;render();toast('رجعت. تعديلاتك بعدها هون، اضغط «حفظ».')}
+    else{await loadOnline();toast('أهلا فيك! فيك تبلّش تعدّل.')}
+  }
+  catch(err){showLogin(errorText(err));f.password.select()}
+  finally{btn.disabled=false;btn.textContent='دخول'}
+});
+$('#logout').addEventListener('click',()=>{if(isDirty()&&!confirm('في تعديلات مش محفوظة. أكيد بدك تطلع؟'))return;storeSet('');data=JSON.parse(saved);undoStack.length=0;$('#login-form').elements.password.value='';showLogin()});
+
+async function saveOnline(newImages,added,removed,kept){
+  const btn=$('#save');btn.disabled=true;
+  try{
+    const files=[];let n=0;
+    for(const [path,blob] of newImages){$('#save-text').textContent=`عم نرفع الصور ${++n}/${newImages.length}…`;const {sha}=await api('blob',{base64:await toBase64(blob)});files.push({path,sha})}
+    $('#save-text').textContent='عم نحفظ…';
+    files.push({path:'js/catalog-data.js',content:dataFileText()},{path:'catalog-data.json',content:JSON.stringify(data,null,2)+'\n'});
+    let missing=false;
+    if(added.length){
+      let tpl=null;
+      for(const id of [...kept,...removed]){try{const r=await fetch(`catalog-${id}.html`,{cache:'no-store'});if(r.ok){tpl=await r.text();break}}catch(e){}}
+      if(tpl)added.forEach(id=>files.push({path:`catalog-${id}.html`,content:categoryPage(tpl,id)}));else missing=true;
+    }
+    const summary=added.length||removed.length?'Update catalog and categories from admin':'Update catalog from admin';
+    await api('commit',{files,deletes:removed.map(id=>`catalog-${id}.html`),message:summary});
+    newImages.forEach(([p])=>pending.delete(p));
+    saved=JSON.stringify(data);render();
+    toast(missing?'انحفظت التعديلات، بس صفحة القسم الجديد ما انعملت. خبّر المطوّر.':'انحفظت التعديلات. الموقع بيتحدّث خلال دقيقة تقريبًا.');
+  }catch(err){
+    console.error(err);render();
+    if(err.code==='bad_password'){storeSet('');showLogin('انتهت الجلسة. فوت من جديد، تعديلاتك بعدها هون.')}
+    else toast(errorText(err));
+  }
+}
+
 function manualSave(newImages,added,removed){
   download('catalog-data.js',dataFileText());
   newImages.forEach(([p,blob])=>download(p.replace('assets/',''),blob));
@@ -352,4 +443,5 @@ document.addEventListener('keydown',e=>{
 });
 addEventListener('beforeunload',e=>{if(isDirty()){e.preventDefault();e.returnValue=''}});
 
-collectAssets();render();restoreFolder();
+collectAssets();render();
+if(ONLINE)initOnline();else restoreFolder();

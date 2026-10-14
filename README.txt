@@ -16,15 +16,16 @@ DeepPro — نسخة كاملة للمراجعة والتعديل
 - contact.html: تواصل معنا (نموذج يجهّز رسالة واتساب).
 - 404.html: صفحة "غير موجودة" للاستضافة.
 
-لوحة التحكم (admin.html):
-1. افتح admin.html بـ Chrome أو Edge.
-2. اضغط «ربط مجلد الموقع» واختار مجلد DeepPro_Complete_Website (مرّة وحدة، المتصفّح بيتذكّره).
-3. زيد، عدّل، انسخ، رتّب أو احذف المنتجات والأقسام، وارفع صور جديدة (بتتصغّر تلقائيًا).
-4. اضغط «حفظ» (أو Ctrl+S): بينكتب js/catalog-data.js وcatalog-data.json، الصور بـ assets، وصفحة catalog-<id>.html لكل قسم جديد.
-5. حدّث صفحة الموقع لتشوف التغيير. إذا الموقع منشور، ارفع الملفات من جديد.
+لوحة التحكم:
+على الموقع المنشور: افتح <رابط الموقع>/admin واكتب كلمة السر.
+- «حفظ» بيبعت التعديلات على GitHub، وVercel بيحدّث الموقع خلال دقيقة تقريبًا.
+- لازم مرّة وحدة تزيد بإعدادات المشروع على Vercel (Settings > Environment Variables):
+  ADMIN_PASSWORD = كلمة السر يلي بتختارها
+  GITHUB_TOKEN   = توكن GitHub (fine-grained) على الـ repo بصلاحية Contents: Read and write
+  وبعدين Redeploy.
+على الكمبيوتر بلا إنترنت: افتح admin.html من المجلد بـ Chrome أو Edge، اربط مجلد الموقع، و«حفظ» بيكتب الملفات مباشرة.
 - «تراجع» (Ctrl+Z) بيرجّع آخر تعديل قبل الحفظ، و«نسخة احتياطية» بينزّل نسخة من البيانات.
-- بمتصفّحات تانية، «حفظ» بينزّل الملفات وبيقلّك وين تحطّها.
-- لوحة التحكم بتعدّل الملفات على جهازك بس، ما بتغيّر موقع منشور. ما في داعي ترفع admin.html وjs/admin.js وcss/admin.css مع الموقع.
+- الصور الكبيرة بتتصغّر تلقائيًا قبل الرفع.
 
 سلّة الطلب:
 الزائر بيزيد المنتجات عالسلة (بتنحفظ بمتصفّحه)، وبيبعت الطلب كلّه مع المجموع برسالة واتساب وحدة على 96176997610.
@@ -51,6 +52,8 @@ Catalog data: js/catalog-data.js (const categories). Shared styles: css/style.cs
 Each page sets <body data-page="..."> (and data-category on category pages); main.js renders from that.
 Header and footer markup is repeated in every page; keep them in sync when editing.
 Basket: stored in localStorage key 'deeppro-cart'; sent as one WhatsApp message.
-Admin: admin.html + js/admin.js + css/admin.css. Uses the File System Access API (Chrome/Edge) to write js/catalog-data.js, catalog-data.json, assets/ uploads and new catalog-<id>.html pages (copied from an existing category page). Category page headers and footer category links are rendered from the data.
+Admin: /admin (vercel.json rewrite to admin.html) + js/admin.js + css/admin.css + api/admin.js.
+Online: api/admin.js checks ADMIN_PASSWORD and commits to GitHub with GITHUB_TOKEN (optional GITHUB_REPO, GITHUB_BRANCH); Vercel redeploys on push.
+Local (file://): uses the File System Access API (Chrome/Edge) to write js/catalog-data.js, catalog-data.json, assets/ uploads and new catalog-<id>.html pages (copied from an existing category page). Category page headers and footer category links are rendered from the data.
 Old single-page links (index.html#category-xxx) redirect to catalog-xxx.html.
 No dependencies or build commands are required. Upload everything to any static host.

@@ -21,6 +21,7 @@
     <span class="a-title">لوحة التحكم</span>
     <span class="status" id="status"><span class="dot"></span><span id="status-text">مش مربوط بمجلد</span></span>
     <div class="a-actions">
+      <button class="btn btn-ghost btn-sm" id="logout" type="button" hidden>خروج</button>
       <button class="btn btn-ghost btn-sm" id="undo" type="button" disabled title="Ctrl+Z">تراجع</button>
       <button class="btn btn-ghost btn-sm" id="backup" type="button" title="نزّل نسخة من بيانات المنتجات">نسخة احتياطية</button>
       <a class="btn btn-ghost btn-sm" href="index.html" target="_blank" rel="noopener">عرض الموقع</a>
@@ -45,7 +46,7 @@
     </div>
     <div class="panel help">
       <h2>كيف بتشتغل؟</h2>
-      <ol>
+      <ol id="help-steps">
         <li>اربط مجلد الموقع مرّة وحدة (Chrome أو Edge).</li>
         <li>عدّل، زيد أو احذف المنتجات والأقسام.</li>
         <li>اضغط «حفظ»، وحدّث صفحة الموقع لتشوف التغيير.</li>
@@ -133,6 +134,19 @@
   <div class="dlg-body one" id="manual-body"></div>
   <div class="dlg-foot"><button class="btn btn-blue" type="button" data-close>تمام</button></div>
 </dialog>
+
+<div class="login" id="login" hidden>
+  <form class="login-card" id="login-form">
+    <img src="assets/deeppro-logo-horizontal-dark-text.png" alt="DEEP PRO" width="1867" height="300">
+    <h1>دخول لوحة التحكم</h1>
+    <p>اكتب كلمة السر لتعدّل المنتجات والأسعار على الموقع.</p>
+    <label class="field"><span>كلمة السر</span><input name="password" type="password" autocomplete="current-password" required></label>
+    <label class="switch">تذكّرني على هالجهاز<input name="remember" type="checkbox"></label>
+    <p class="err" id="login-err" role="alert" hidden></p>
+    <button class="btn btn-blue" type="submit">دخول</button>
+    <a class="back" href="/">ارجع للموقع</a>
+  </form>
+</div>
 
 <div class="toast" id="toast" role="status" aria-live="polite" hidden><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span id="toast-text"></span></div>
 
