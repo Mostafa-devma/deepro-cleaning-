@@ -42,7 +42,9 @@ module.exports = async (req, res) => {
     return res.status(500).json({ code: 'not_configured', error: 'ADMIN_PASSWORD and GITHUB_TOKEN must be set in Vercel' });
   }
   const body = typeof req.body === 'string' ? JSON.parse(req.body || '{}') : req.body || {};
-  if (!body.password || !sameSecret(body.password, process.env.ADMIN_PASSWORD)) {
+  // ignore stray spaces around the password (easy to add when copying it into Vercel or the form)
+  const typed = String(body.password || '').trim();
+  if (!typed || !sameSecret(typed, process.env.ADMIN_PASSWORD.trim())) {
     await new Promise(r => setTimeout(r, 800)); // slow down guessing
     return res.status(401).json({ code: 'bad_password', error: 'Wrong password' });
   }
