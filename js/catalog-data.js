@@ -50,7 +50,7 @@ const categories=[
       {
         "name": "مانع الضباب",
         "description": "يزيل الضباب عن زجاج السيارات ومرآة الحمام",
-        "image": "assets/b.jpg",
+        "image": "assets/image-edb308a3.jpg",
         "price": null
       }
     ],
