@@ -45,6 +45,12 @@
         "size": "330 مل",
         "description": "Stain Remover — مزيل البقع عن الأقمشة",
         "imageCaption": "صورة دعائية توضيحية"
+      },
+      {
+        "name": "مانع الضباب",
+        "description": "يزيل الضباب عن زجاج السيارات ومرآة الحمام",
+        "image": "assets/b.jpg",
+        "price": null
       }
     ],
     "image": "assets/category-professional.jpg"
