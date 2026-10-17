@@ -17,7 +17,31 @@ const categories=[
     "color": "#e6eee8",
     "accent": "#548775",
     "icon": "drop",
-    "products": [],
+    "products": [
+      {
+        "name": "سائل غسيل Gamrex",
+        "description": "سائل عالي الجودة مع رغوة كثيفة",
+        "size": "3 litre",
+        "image": "assets/image-60907b1a.jpg",
+        "price": 7.5,
+        "priceDisplay": "7.50"
+      },
+      {
+        "name": "سائل غسيل Elvera",
+        "description": "ينظف اصعب البقع، يحمي ويثبت الألوان",
+        "size": "3 litre",
+        "image": "assets/image-5d57c8c6.jpg",
+        "price": 6
+      },
+      {
+        "name": "سائل غسيل Best clean",
+        "description": "Deep clean *3  100%result",
+        "size": "3 litre",
+        "image": "assets/image-37f4721e.jpg",
+        "price": 4.5,
+        "priceDisplay": "4.50"
+      }
+    ],
     "image": "assets/image-d4aad579.jpg",
     "imagePosition": "center 55%"
   },
