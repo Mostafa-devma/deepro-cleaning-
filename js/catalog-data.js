@@ -83,6 +83,13 @@ const categories=[
         "size": "500 ml",
         "image": "assets/image-c4220e7a.jpg",
         "price": 7
+      },
+      {
+        "name": "منظف الغسالات والجلايات",
+        "description": "يزيل العفن والكلس من الجرن الداخلي",
+        "size": "1 Litre",
+        "image": "assets/image-a466f364.jpg",
+        "price": 8
       }
     ],
     "image": "assets/image-d4aad579.jpg",
