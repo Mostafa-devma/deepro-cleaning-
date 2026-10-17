@@ -57,85 +57,9 @@ const categories=[
     "image": "assets/category-professional.jpg"
   },
   {
-    "id": "tools",
-    "title": "المعدات والأدوات الاحترافية",
-    "description": "أدوات للمسح والكنس والجلي.",
-    "color": "#edf0e9",
-    "accent": "#667b50",
-    "icon": "spark",
-    "products": [
-      {
-        "name": "ممسحة PCV مع سطل",
-        "image": "assets/pcv-mop-bucket.png",
-        "price": 25,
-        "description": "ممسحة مع سطل، مكفولة لمدة سنتين.",
-        "priceUnit": "للطقم (القطعتين)",
-        "imageCaption": "صورة دعائية توضيحية"
-      },
-      {
-        "name": "طقم مجرود ومكنسة وسطل",
-        "image": "assets/broom-dustpan-bin-set.png",
-        "price": 15,
-        "description": "طقم عالي الجودة من مجرود ومكنسة وسطل، مكفول لمدة سنتين.",
-        "priceUnit": "للطقم الكامل (3 قطع)",
-        "imageCaption": "مدة الكفالة المعتمدة سنتان؛ وردت 3 سنوات في الصورة الدعائية."
-      },
-      {
-        "name": "ممسحة احترافية",
-        "image": "assets/professional-mop.png",
-        "price": 22,
-        "description": "ممسحة احترافية مكفولة لمدة سنتين.",
-        "imageCaption": "صورة دعائية توضيحية"
-      },
-      {
-        "name": "إسفنج جلي Arix Splendelli",
-        "image": "assets/sponge-arix.jpg",
-        "price": 1,
-        "size": "عبوة من قطعتين",
-        "priceUnit": "للعبوة (قطعتان)"
-      },
-      {
-        "name": "إسفنج جلي Casalina الملوّن",
-        "image": "assets/sponge-casalina-multicolor.jpg",
-        "price": 3,
-        "size": "عبوة من 3 قطع",
-        "priceUnit": "للعبوة (3 قطع)"
-      },
-      {
-        "name": "إسفنج جلي Casalina الأصفر والأخضر",
-        "image": "assets/sponge-casalina-yellow-green.jpg",
-        "price": 0.7,
-        "priceDisplay": "0.70",
-        "size": "عبوة من قطعتين",
-        "priceUnit": "للعبوة (قطعتان)"
-      },
-      {
-        "name": "سيف جلي Casalina Inox — 4 قطع",
-        "image": "assets/scourer-inox-4pcs.jpg",
-        "price": null
-      },
-      {
-        "name": "سيف جلي Casalina مقطّع — 8 قطع",
-        "image": "assets/scourer-steelwool-8pcs.jpg",
-        "price": null
-      },
-      {
-        "name": "سيف جلي Casalina Inox — قطعتان",
-        "image": "assets/scourer-inox-2pcs.jpg",
-        "price": null
-      },
-      {
-        "name": "سيف جلي Casalina Inox XL — 40 غرام",
-        "image": "assets/scourer-inox-xl-40g.jpg",
-        "price": null
-      }
-    ],
-    "image": "assets/category-tools.png"
-  },
-  {
     "id": "daily",
-    "title": "منظفات يومية وعناية شخصية",
-    "description": "منتجات الغسيل والجلي والأرضيات والعناية الشخصية.",
+    "title": "الغسيل والعناية بالملابس",
+    "description": "منتجات الغسيل ومعطراتها، مزيل البقع والتجاعيد",
     "color": "#e6eee8",
     "accent": "#548775",
     "icon": "drop",
@@ -231,7 +155,120 @@ const categories=[
       }
     ],
     "image": "assets/category-daily.jpg",
-    "imagePosition": "center 74%"
+    "imagePosition": "center 55%"
+  },
+  {
+    "id": "tools",
+    "title": "المعدات والأدوات الاحترافية",
+    "description": "أدوات للمسح والكنس والجلي.",
+    "color": "#edf0e9",
+    "accent": "#667b50",
+    "icon": "spark",
+    "products": [
+      {
+        "name": "ممسحة PCV مع سطل",
+        "image": "assets/pcv-mop-bucket.png",
+        "price": 25,
+        "description": "ممسحة مع سطل، مكفولة لمدة سنتين.",
+        "priceUnit": "للطقم (القطعتين)",
+        "imageCaption": "صورة دعائية توضيحية"
+      },
+      {
+        "name": "طقم مجرود ومكنسة وسطل",
+        "image": "assets/broom-dustpan-bin-set.png",
+        "price": 15,
+        "description": "طقم عالي الجودة من مجرود ومكنسة وسطل، مكفول لمدة سنتين.",
+        "priceUnit": "للطقم الكامل (3 قطع)",
+        "imageCaption": "مدة الكفالة المعتمدة سنتان؛ وردت 3 سنوات في الصورة الدعائية."
+      },
+      {
+        "name": "ممسحة احترافية",
+        "image": "assets/professional-mop.png",
+        "price": 22,
+        "description": "ممسحة احترافية مكفولة لمدة سنتين.",
+        "imageCaption": "صورة دعائية توضيحية"
+      },
+      {
+        "name": "إسفنج جلي Arix Splendelli",
+        "image": "assets/sponge-arix.jpg",
+        "price": 1,
+        "size": "عبوة من قطعتين",
+        "priceUnit": "للعبوة (قطعتان)"
+      },
+      {
+        "name": "إسفنج جلي Casalina الملوّن",
+        "image": "assets/sponge-casalina-multicolor.jpg",
+        "price": 3,
+        "size": "عبوة من 3 قطع",
+        "priceUnit": "للعبوة (3 قطع)"
+      },
+      {
+        "name": "إسفنج جلي Casalina الأصفر والأخضر",
+        "image": "assets/sponge-casalina-yellow-green.jpg",
+        "price": 0.7,
+        "priceDisplay": "0.70",
+        "size": "عبوة من قطعتين",
+        "priceUnit": "للعبوة (قطعتان)"
+      },
+      {
+        "name": "سيف جلي Casalina Inox — 4 قطع",
+        "image": "assets/scourer-inox-4pcs.jpg",
+        "price": null
+      },
+      {
+        "name": "سيف جلي Casalina مقطّع — 8 قطع",
+        "image": "assets/scourer-steelwool-8pcs.jpg",
+        "price": null
+      },
+      {
+        "name": "سيف جلي Casalina Inox — قطعتان",
+        "image": "assets/scourer-inox-2pcs.jpg",
+        "price": null
+      },
+      {
+        "name": "سيف جلي Casalina Inox XL — 40 غرام",
+        "image": "assets/scourer-inox-xl-40g.jpg",
+        "price": null
+      }
+    ],
+    "image": "assets/category-tools.png"
+  },
+  {
+    "id": "soap",
+    "title": "الصابون البلدي من زيوت طبيعية",
+    "description": "خمسة أصناف مختارة من تشكيلة الصابون البلدي.",
+    "color": "#f1e9e3",
+    "accent": "#a47c60",
+    "icon": "soap",
+    "products": [
+      {
+        "name": "صابونة إكليل الجبل",
+        "image": "assets/soap-rosemary.jpg",
+        "price": 5
+      },
+      {
+        "name": "صابونة السدر",
+        "image": "assets/soap-sidr.jpg",
+        "price": 5
+      },
+      {
+        "name": "صابونة زيت الغار",
+        "image": "assets/soap-laurel.jpg",
+        "price": 5
+      },
+      {
+        "name": "صابونة دهن العود",
+        "image": "assets/soap-oud.jpg",
+        "price": 5
+      },
+      {
+        "name": "صابونة قشر الرمان",
+        "image": "assets/soap-pomegranate.jpg",
+        "price": 5
+      }
+    ],
+    "image": "assets/category-soap.png",
+    "imagePosition": "center 55%"
   },
   {
     "id": "fragrances",
@@ -290,42 +327,5 @@ const categories=[
     ],
     "image": "assets/category-fragrances.png",
     "imagePosition": "center 60%"
-  },
-  {
-    "id": "soap",
-    "title": "الصابون البلدي من زيوت طبيعية",
-    "description": "خمسة أصناف مختارة من تشكيلة الصابون البلدي.",
-    "color": "#f1e9e3",
-    "accent": "#a47c60",
-    "icon": "soap",
-    "products": [
-      {
-        "name": "صابونة إكليل الجبل",
-        "image": "assets/soap-rosemary.jpg",
-        "price": 5
-      },
-      {
-        "name": "صابونة السدر",
-        "image": "assets/soap-sidr.jpg",
-        "price": 5
-      },
-      {
-        "name": "صابونة زيت الغار",
-        "image": "assets/soap-laurel.jpg",
-        "price": 5
-      },
-      {
-        "name": "صابونة دهن العود",
-        "image": "assets/soap-oud.jpg",
-        "price": 5
-      },
-      {
-        "name": "صابونة قشر الرمان",
-        "image": "assets/soap-pomegranate.jpg",
-        "price": 5
-      }
-    ],
-    "image": "assets/category-soap.png",
-    "imagePosition": "center 55%"
   }
 ];
