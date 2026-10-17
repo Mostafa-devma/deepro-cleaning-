@@ -18,7 +18,7 @@ const categories=[
     "accent": "#548775",
     "icon": "drop",
     "products": [],
-    "image": "assets/category-daily.jpg",
+    "image": "assets/image-d4aad579.jpg",
     "imagePosition": "center 55%"
   },
   {
