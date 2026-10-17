@@ -62,6 +62,20 @@ const categories=[
         "size": "3 litre",
         "image": "assets/image-70ac599.jpg",
         "price": 4
+      },
+      {
+        "name": "مزيل البقع من Jamrex",
+        "description": "يزيل اصعب البقع عن الاقمشة",
+        "size": "250Ml - 100Ml",
+        "image": "assets/image-1ba6b7e9.jpg",
+        "price": null
+      },
+      {
+        "name": "مزيل البقع من Magic touch",
+        "description": "يزيل البقع العنيدة عن الملابس، المفروشات ، السجاد",
+        "size": "250Ml - 100Ml",
+        "image": "assets/image-b968b3b4.jpg",
+        "price": null
       }
     ],
     "image": "assets/image-d4aad579.jpg",
