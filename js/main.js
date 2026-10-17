@@ -157,6 +157,8 @@ function initHome(){
   const tabs=$('#problems'),panel=$('#solution');
   if(tabs&&panel){
     const list=PROBLEMS.map(x=>({...x,p:ALL.find(p=>p.name===x.name)})).filter(x=>x.p);
+    // products renamed or moved in the admin: hide the helper instead of breaking the page
+    if(!list.length){const sec=tabs.closest('section');if(sec)sec.hidden=true}else{
     tabs.innerHTML=list.map((x,n)=>`<button class="problem-btn" type="button" role="tab" id="pb-${n}" aria-controls="solution" aria-selected="${n===0}" tabindex="${n===0?0:-1}" data-problem="${n}"><span class="badge">${icon(x.icon)}</span>${x.label}</button>`).join('');
     const show=n=>{const x=list[n],p=x.p;
       $$('.problem-btn',tabs).forEach((b,i)=>{b.setAttribute('aria-selected',i===n);b.tabIndex=i===n?0:-1});
@@ -166,7 +168,7 @@ function initHome(){
     tabs.addEventListener('click',e=>{const b=e.target.closest('[data-problem]');if(b)show(+b.dataset.problem)});
     tabs.addEventListener('keydown',e=>{const keys={ArrowDown:1,ArrowLeft:1,ArrowUp:-1,ArrowRight:-1};if(!(e.key in keys))return;e.preventDefault();const cur=$$('.problem-btn',tabs).findIndex(b=>b.getAttribute('aria-selected')==='true');const n=(cur+keys[e.key]+list.length)%list.length;show(n);$('#pb-'+n).focus()});
     show(0);
-  }
+  }}
 
   const rail=$('#rail');
   if(rail){
@@ -244,9 +246,11 @@ function initContactForm(){
 Cart.load();
 initChrome();
 renderCart();
+// each part runs on its own, so one problem can't leave the rest of the page blank
 const page=document.body.dataset.page;
-if(page==='home')initHome();
-if(page==='catalog'||page==='category')initShop(document.body.dataset.category);
-initFaq();
-initContactForm();
+const safely=fn=>{try{fn()}catch(e){console.error(e)}};
+if(page==='home')safely(initHome);
+if(page==='catalog'||page==='category')safely(()=>initShop(document.body.dataset.category));
+safely(initFaq);
+safely(initContactForm);
 initReveal();
