@@ -19,7 +19,7 @@ const categories=[
     "icon": "drop",
     "products": [
       {
-        "name": "سائل غسيل Gamrex",
+        "name": "سائل غسيل Jamrex",
         "description": "سائل عالي الجودة مع رغوة كثيفة",
         "size": "3 litre",
         "image": "assets/image-60907b1a.jpg",
@@ -40,6 +40,28 @@ const categories=[
         "image": "assets/image-37f4721e.jpg",
         "price": 4.5,
         "priceDisplay": "4.50"
+      },
+      {
+        "name": "معطر ومطري غسيل Jamrex",
+        "description": "خطوة نحو النظافة",
+        "size": "3 litre",
+        "image": "assets/image-482246b.jpg",
+        "price": 6.5,
+        "priceDisplay": "6.50"
+      },
+      {
+        "name": "ملطف ومعطر الأقمشة",
+        "description": "حب من التجربة الاولى",
+        "size": "3 litre",
+        "image": "assets/image-351a4787.jpg",
+        "price": 6
+      },
+      {
+        "name": "مطري ومعطر  Best clean",
+        "description": "Ultra soft",
+        "size": "3 litre",
+        "image": "assets/image-70ac599.jpg",
+        "price": 4
       }
     ],
     "image": "assets/image-d4aad579.jpg",
