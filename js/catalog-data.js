@@ -146,35 +146,12 @@ const categories=[
   },
   {
     "id": "tools",
-    "title": "المعدات والأدوات الاحترافية",
-    "description": "أدوات للمسح والكنس والجلي.",
+    "title": "أدوات ومستلزمات التنظيف",
+    "description": "مماسح، مكانس، فراشي، اسفنج جلي، سيف ، ليف حمام، شفق مايكروفايبر ،",
     "color": "#edf0e9",
     "accent": "#667b50",
     "icon": "spark",
     "products": [
-      {
-        "name": "ممسحة PCV مع سطل",
-        "image": "assets/pcv-mop-bucket.png",
-        "price": 25,
-        "description": "ممسحة مع سطل، مكفولة لمدة سنتين.",
-        "priceUnit": "للطقم (القطعتين)",
-        "imageCaption": "صورة دعائية توضيحية"
-      },
-      {
-        "name": "طقم مجرود ومكنسة وسطل",
-        "image": "assets/broom-dustpan-bin-set.png",
-        "price": 15,
-        "description": "طقم عالي الجودة من مجرود ومكنسة وسطل، مكفول لمدة سنتين.",
-        "priceUnit": "للطقم الكامل (3 قطع)",
-        "imageCaption": "مدة الكفالة المعتمدة سنتان؛ وردت 3 سنوات في الصورة الدعائية."
-      },
-      {
-        "name": "ممسحة احترافية",
-        "image": "assets/professional-mop.png",
-        "price": 22,
-        "description": "ممسحة احترافية مكفولة لمدة سنتين.",
-        "imageCaption": "صورة دعائية توضيحية"
-      },
       {
         "name": "إسفنج جلي Arix Splendelli",
         "image": "assets/sponge-arix.jpg",
@@ -218,6 +195,14 @@ const categories=[
         "price": null
       }
     ],
-    "image": "assets/category-tools.png"
+    "image": "assets/category-tools.png",
+    "imagePosition": "center 55%"
+  },
+  {
+    "id": "section-10",
+    "title": "معدات تنظيف إحترافية",
+    "description": "معدات عالية الجودة ومكفولة",
+    "products": [],
+    "imagePosition": "center 55%"
   }
 ];
