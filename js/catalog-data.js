@@ -76,6 +76,13 @@ const categories=[
         "size": "250Ml - 100Ml",
         "image": "assets/image-b968b3b4.jpg",
         "price": null
+      },
+      {
+        "name": "بخاخ مزيل التجاعيد",
+        "description": "بديل المكواة",
+        "size": "500 ml",
+        "image": "assets/image-c4220e7a.jpg",
+        "price": 7
       }
     ],
     "image": "assets/image-d4aad579.jpg",
