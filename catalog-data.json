@@ -6,53 +6,7 @@
     "color": "#e3eef0",
     "accent": "#447985",
     "icon": "spark",
-    "products": [
-      {
-        "name": "Deep cleaning",
-        "image": "assets/deep-cleaning-500ml.jpg",
-        "price": 6,
-        "description": "مزيل الزيوت والشحوم المتراكمة",
-        "size": "500 مل",
-        "imageCaption": "صورة دعائية توضيحية"
-      },
-      {
-        "name": "مزيل التكلسات والصدأ",
-        "image": "assets/descaler-rust-500ml.jpg",
-        "price": 7,
-        "size": "500 مل",
-        "description": "مزيل التكلسات والصدأ",
-        "imageCaption": "صورة دعائية توضيحية"
-      },
-      {
-        "name": "Magic Touch — قاتل الروائح",
-        "image": "assets/odor-killer-250ml.jpg",
-        "price": 8,
-        "size": "250 مل",
-        "description": "ODOR KILLER — قاتل الروائح الكريهة"
-      },
-      {
-        "name": "Magic Touch — ملمّع الأسطح",
-        "image": "assets/surface-polish-280ml.png",
-        "price": 8,
-        "size": "280 مل",
-        "description": "ملمّع للبلاستيك والخشب والجلود",
-        "imageCaption": "صورة دعائية توضيحية"
-      },
-      {
-        "name": "Magic Touch — مزيل بقع الأقمشة",
-        "image": "assets/stain-remover-330ml.png",
-        "price": 8,
-        "size": "330 مل",
-        "description": "Stain Remover — مزيل البقع عن الأقمشة",
-        "imageCaption": "صورة دعائية توضيحية"
-      },
-      {
-        "name": "مانع الضباب",
-        "description": "يزيل الضباب عن زجاج السيارات ومرآة الحمام",
-        "image": "assets/image-edb308a3.jpg",
-        "price": null
-      }
-    ],
+    "products": [],
     "image": "assets/category-professional.jpg"
   },
   {
@@ -62,98 +16,131 @@
     "color": "#e6eee8",
     "accent": "#548775",
     "icon": "drop",
+    "products": [],
+    "image": "assets/category-daily.jpg",
+    "imagePosition": "center 55%"
+  },
+  {
+    "id": "section-6",
+    "title": "منظفات المطابخ والأواني",
+    "description": "سوائل الجلي، منظفات الأفران والغاز، مزيلات الدهون والشحوم ملمع الستانلس والالومينيوم، ملح الجلايات",
+    "products": [],
+    "imagePosition": "center 55%"
+  },
+  {
+    "id": "section-7",
+    "title": "منظفات الحمامات وإزالة لترسبات",
+    "description": "مزيل التكلسات، مزيل العفن، مزيل الصدأ، تجهيزات الحمامات",
+    "products": [],
+    "imagePosition": "center 55%"
+  },
+  {
+    "id": "section-8",
+    "title": "منظفات الأسطح وتلميعها",
+    "description": "منظفات الأرضيات ومعطراتها، منظف الزجاج، مانع الضباب، ملمع الخشب والبلاستيك، مزيل صدأ الحديد .",
+    "products": [],
+    "imagePosition": "center 55%"
+  },
+  {
+    "id": "section-9",
+    "title": "العناية بالمفروشات والسيارات والأحذية",
+    "description": "منظف الكنب والسجاد والأقمشة، مزيلات البقع، مزيل اصفرار المصابيح، منظفات الاحذية",
+    "products": [],
+    "imagePosition": "center 55%"
+  },
+  {
+    "id": "fragrances",
+    "title": "العطور والمعطّرات",
+    "description": "للجو، وللاستخدام الشخصي، وللحمّامات والسيارات.",
+    "color": "#eeeae1",
+    "accent": "#8b7956",
+    "icon": "drop",
     "products": [
       {
-        "name": "جامركس — سائل ومطرّي غسيل نسيم الموج",
-        "description": "سائل غسيل ومطرّي ومعطّر غسيل — Wave Breeze. سعة كل عبوة 3 لتر.",
-        "image": "assets/jamrex-wave-breeze.jpg",
-        "price": null
+        "name": "عطر منزلي بخّاخ",
+        "image": "assets/home-fragrance-spray.png",
+        "price": 6,
+        "priceUnit": "للعبوة الواحدة",
+        "description": "عطر منزلي بخّاخ.",
+        "imageCaption": "صورة التشكيلة — اختر الرائحة عبر واتساب."
       },
       {
-        "name": "جامركس — سائل ومطرّي غسيل نسيم البنفسج",
-        "description": "سائل غسيل ومطرّي ومعطّر غسيل — Violet Breeze. سعة كل عبوة 3 لتر.",
-        "image": "assets/jamrex-violet-breeze.png",
-        "price": null
+        "name": "عطر منزلي بالأعواد",
+        "image": "assets/home-fragrance-reeds.png",
+        "price": 7,
+        "priceUnit": "للعبوة الواحدة",
+        "description": "عطر منزلي بالأعواد.",
+        "imageCaption": "صورة التشكيلة — اختر الرائحة عبر واتساب."
       },
       {
-        "name": "Elvera — ملطّف الأقمشة الوردي",
-        "description": "ملطّف الأقمشة Pink — 3 لتر.",
-        "image": "assets/elvera-pink.jpg",
-        "price": null
+        "name": "عطورات عصام اللبان — 100 مل",
+        "image": "assets/issam-labban-perfumes.png",
+        "price": 10,
+        "size": "100 مل",
+        "description": "عطورات عصام اللبان",
+        "imageCaption": "صورة التشكيلة — اختر الرائحة عبر واتساب."
       },
       {
-        "name": "Elvera — ملطّف الأقمشة الأزرق",
-        "description": "ملطّف الأقمشة Blue — 3 لتر.",
-        "image": "assets/elvera-blue.jpg",
-        "price": null
+        "name": "عطورات عصام اللبان — 30 مل",
+        "image": "assets/issam-labban-perfumes.png",
+        "price": 5,
+        "size": "30 مل",
+        "description": "عطورات عصام اللبان",
+        "imageCaption": "صورة التشكيلة — اختر الرائحة عبر واتساب."
       },
       {
-        "name": "Elvera — سائل للجلي — 3 ليتر",
-        "description": "سائل للجلي",
-        "image": "assets/dishwashing-elvera.jpg",
-        "price": null,
-        "size": "3 ليتر"
+        "name": "معطّر حبيبات بلاك أودور",
+        "image": "assets/fragrance-beads-black-odor.png",
+        "price": 6,
+        "priceUnit": "للعبوة الواحدة",
+        "imageCaption": "صورة التشكيلة — اختر الرائحة عبر واتساب."
       },
       {
-        "name": "Best Clean — سائل للجلي — 3.5 ليتر",
-        "description": "سائل للجلي",
-        "image": "assets/dishwashing-best-clean.png",
-        "price": null,
-        "size": "3.5 ليتر"
-      },
-      {
-        "name": "جامركس — سائل للجلي — 3.7 ليتر",
-        "description": "سائل للجلي",
-        "image": "assets/dishwashing-jamrex.png",
-        "price": null,
-        "size": "3.7 ليتر"
-      },
-      {
-        "name": "جامركس — سائل للجلي — 700 مل",
-        "description": "سائل للجلي",
-        "size": "700 مل",
-        "image": "assets/dishwashing-jamrex-700ml.png",
-        "price": null
-      },
-      {
-        "name": "Elvera — سائل للجلي — 700 مل",
-        "description": "سائل للجلي",
-        "size": "700 مل",
-        "image": "assets/dishwashing-elvera-700ml.png",
-        "price": null
-      },
-      {
-        "name": "Best Clean — سائل للجلي — 700 مل",
-        "description": "سائل للجلي",
-        "size": "700 مل",
-        "image": "assets/dishwashing-best-clean-700ml.png",
-        "price": null
-      },
-      {
-        "name": "Elvera — منظّف الأرضيات",
-        "description": "منظّف للأرضيات",
-        "size": "3 ليتر",
-        "image": "assets/floor-cleaner-elvera.png",
-        "price": null
-      },
-      {
-        "name": "جامركس — منظّف الأرضيات",
-        "description": "منظّف للأرضيات بأحجام متنوعة. تواصل معنا لتحديد الحجم المطلوب.",
-        "image": "assets/floor-cleaner-jamrex.png",
-        "price": null
-      },
-      {
-        "name": "تشكيلة صابون اليدين",
-        "image": "assets/hand-soap-assortment.png",
-        "price": null
-      },
-      {
-        "name": "تشكيلة شامبو مع بلسم",
-        "image": "assets/shampoo-assortment.png",
-        "price": null
+        "name": "معطّر سيارات بلاك أودور",
+        "image": "assets/car-fragrance-black-odor.png",
+        "price": 7,
+        "priceUnit": "للعبوة الواحدة",
+        "imageCaption": "صورة التشكيلة — اختر الرائحة عبر واتساب."
       }
     ],
-    "image": "assets/category-daily.jpg",
+    "image": "assets/category-fragrances.png",
+    "imagePosition": "center 60%"
+  },
+  {
+    "id": "soap",
+    "title": "الصابون البلدي من زيوت طبيعية",
+    "description": "خمسة أصناف مختارة من تشكيلة الصابون البلدي.",
+    "color": "#f1e9e3",
+    "accent": "#a47c60",
+    "icon": "soap",
+    "products": [
+      {
+        "name": "صابونة إكليل الجبل",
+        "image": "assets/soap-rosemary.jpg",
+        "price": 5
+      },
+      {
+        "name": "صابونة السدر",
+        "image": "assets/soap-sidr.jpg",
+        "price": 5
+      },
+      {
+        "name": "صابونة زيت الغار",
+        "image": "assets/soap-laurel.jpg",
+        "price": 5
+      },
+      {
+        "name": "صابونة دهن العود",
+        "image": "assets/soap-oud.jpg",
+        "price": 5
+      },
+      {
+        "name": "صابونة قشر الرمان",
+        "image": "assets/soap-pomegranate.jpg",
+        "price": 5
+      }
+    ],
+    "image": "assets/category-soap.png",
     "imagePosition": "center 55%"
   },
   {
@@ -231,100 +218,5 @@
       }
     ],
     "image": "assets/category-tools.png"
-  },
-  {
-    "id": "soap",
-    "title": "الصابون البلدي من زيوت طبيعية",
-    "description": "خمسة أصناف مختارة من تشكيلة الصابون البلدي.",
-    "color": "#f1e9e3",
-    "accent": "#a47c60",
-    "icon": "soap",
-    "products": [
-      {
-        "name": "صابونة إكليل الجبل",
-        "image": "assets/soap-rosemary.jpg",
-        "price": 5
-      },
-      {
-        "name": "صابونة السدر",
-        "image": "assets/soap-sidr.jpg",
-        "price": 5
-      },
-      {
-        "name": "صابونة زيت الغار",
-        "image": "assets/soap-laurel.jpg",
-        "price": 5
-      },
-      {
-        "name": "صابونة دهن العود",
-        "image": "assets/soap-oud.jpg",
-        "price": 5
-      },
-      {
-        "name": "صابونة قشر الرمان",
-        "image": "assets/soap-pomegranate.jpg",
-        "price": 5
-      }
-    ],
-    "image": "assets/category-soap.png",
-    "imagePosition": "center 55%"
-  },
-  {
-    "id": "fragrances",
-    "title": "العطور والمعطّرات",
-    "description": "للجو، وللاستخدام الشخصي، وللحمّامات والسيارات.",
-    "color": "#eeeae1",
-    "accent": "#8b7956",
-    "icon": "drop",
-    "products": [
-      {
-        "name": "عطر منزلي بخّاخ",
-        "image": "assets/home-fragrance-spray.png",
-        "price": 6,
-        "priceUnit": "للعبوة الواحدة",
-        "description": "عطر منزلي بخّاخ.",
-        "imageCaption": "صورة التشكيلة — اختر الرائحة عبر واتساب."
-      },
-      {
-        "name": "عطر منزلي بالأعواد",
-        "image": "assets/home-fragrance-reeds.png",
-        "price": 7,
-        "priceUnit": "للعبوة الواحدة",
-        "description": "عطر منزلي بالأعواد.",
-        "imageCaption": "صورة التشكيلة — اختر الرائحة عبر واتساب."
-      },
-      {
-        "name": "عطورات عصام اللبان — 100 مل",
-        "image": "assets/issam-labban-perfumes.png",
-        "price": 10,
-        "size": "100 مل",
-        "description": "عطورات عصام اللبان",
-        "imageCaption": "صورة التشكيلة — اختر الرائحة عبر واتساب."
-      },
-      {
-        "name": "عطورات عصام اللبان — 30 مل",
-        "image": "assets/issam-labban-perfumes.png",
-        "price": 5,
-        "size": "30 مل",
-        "description": "عطورات عصام اللبان",
-        "imageCaption": "صورة التشكيلة — اختر الرائحة عبر واتساب."
-      },
-      {
-        "name": "معطّر حبيبات بلاك أودور",
-        "image": "assets/fragrance-beads-black-odor.png",
-        "price": 6,
-        "priceUnit": "للعبوة الواحدة",
-        "imageCaption": "صورة التشكيلة — اختر الرائحة عبر واتساب."
-      },
-      {
-        "name": "معطّر سيارات بلاك أودور",
-        "image": "assets/car-fragrance-black-odor.png",
-        "price": 7,
-        "priceUnit": "للعبوة الواحدة",
-        "imageCaption": "صورة التشكيلة — اختر الرائحة عبر واتساب."
-      }
-    ],
-    "image": "assets/category-fragrances.png",
-    "imagePosition": "center 60%"
   }
 ]
