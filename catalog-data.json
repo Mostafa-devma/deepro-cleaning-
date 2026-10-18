@@ -146,6 +146,41 @@
         "size": "700ml",
         "image": "assets/image-e069ad5b.jpg",
         "price": 2
+      },
+      {
+        "name": "ملمع جل الستانلس والالومينيوم",
+        "description": "استعد لمعان مطبخك بلمسة واحدة",
+        "size": "500 ml",
+        "image": "assets/image-591de8b3.jpg",
+        "price": 8
+      },
+      {
+        "name": "منظف الغاز  ovenox",
+        "size": "600ml",
+        "image": "assets/image-51c8fabb.jpg",
+        "price": 4,
+        "description": "مزيل الزيوت والشحوم المتراكمة"
+      },
+      {
+        "name": "Deep cleaning",
+        "description": "متعدد الوظائف، بدون رائحة او طعمة ، مزيل العفن والزيوت والشحوم المتراكمة بكفاءة عالية، آمن في الاستخدام",
+        "size": "500 ml",
+        "image": "assets/image-316ab6cf.jpg",
+        "price": 6
+      },
+      {
+        "name": "ملح الجلايات",
+        "description": "مزيل التكلسات من أحواض الجلايات والغسالات",
+        "size": "1kg",
+        "image": "assets/image-c79d0c2.jpg",
+        "price": 2
+      },
+      {
+        "name": "Quita grasas",
+        "description": "صناعة اسبانية مزيل الشحوم والدهون وفعال على الالبسة المتسخة",
+        "image": "assets/image-9354f655.jpg",
+        "price": 4.5,
+        "priceDisplay": "4.50"
       }
     ],
     "imagePosition": "center 55%",
