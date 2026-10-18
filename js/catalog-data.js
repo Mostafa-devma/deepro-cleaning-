@@ -100,7 +100,8 @@ const categories=[
     "title": "منظفات المطابخ والأواني",
     "description": "سوائل الجلي، منظفات الأفران والغاز، مزيلات الدهون والشحوم ملمع الستانلس والالومينيوم، ملح الجلايات",
     "products": [],
-    "imagePosition": "center 55%"
+    "imagePosition": "center 55%",
+    "image": "assets/image-510310e3.jpg"
   },
   {
     "id": "section-7",
