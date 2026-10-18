@@ -121,6 +121,31 @@
         "image": "assets/image-60cdd380.jpg",
         "price": 3.5,
         "priceDisplay": "3.50"
+      },
+      {
+        "name": "سائل الجلي Jamrex",
+        "size": "2 litre",
+        "image": "assets/image-6cc9ed7a.jpg",
+        "price": 5
+      },
+      {
+        "name": "سائل الجلي Elvera",
+        "size": "800 ml",
+        "image": "assets/image-786a3fed.jpg",
+        "price": 1.5,
+        "priceDisplay": "1.50"
+      },
+      {
+        "name": "سائل الجلي Best clean",
+        "size": "700ml",
+        "image": "assets/image-1ddf48c0.jpg",
+        "price": 1
+      },
+      {
+        "name": "سائل الجلي Jamrex",
+        "size": "700ml",
+        "image": "assets/image-e069ad5b.jpg",
+        "price": 2
       }
     ],
     "imagePosition": "center 55%",
