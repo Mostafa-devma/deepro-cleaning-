@@ -99,7 +99,31 @@ const categories=[
     "id": "section-6",
     "title": "منظفات المطابخ والأواني",
     "description": "سوائل الجلي، منظفات الأفران والغاز، مزيلات الدهون والشحوم ملمع الستانلس والالومينيوم، ملح الجلايات",
-    "products": [],
+    "products": [
+      {
+        "name": "سائل الجلي Jamrex",
+        "description": "خطوة ممتازة نحو النظافة",
+        "size": "3.7 litre",
+        "image": "assets/image-dd05e87d.jpg",
+        "price": 8
+      },
+      {
+        "name": "سائل الجلي Elvera",
+        "description": "حب من التجربة الاولى، رغوة لا تضاهى",
+        "size": "3 litre",
+        "image": "assets/image-f16fde7f.jpg",
+        "price": 5.5,
+        "priceDisplay": "5.50"
+      },
+      {
+        "name": "سائل الجلي Best clean",
+        "description": "ملك التوفير ، نتائج مرضية",
+        "size": "3 litre",
+        "image": "assets/image-60cdd380.jpg",
+        "price": 3.5,
+        "priceDisplay": "3.50"
+      }
+    ],
     "imagePosition": "center 55%",
     "image": "assets/image-510310e3.jpg"
   },
