@@ -276,12 +276,14 @@
       {
         "name": "صابونة إكليل الجبل",
         "image": "assets/soap-rosemary.jpg",
-        "price": 5
+        "price": 5,
+        "description": "مضادة للقشرة"
       },
       {
         "name": "صابونة السدر",
         "image": "assets/soap-sidr.jpg",
-        "price": 5
+        "price": 5,
+        "description": "تقوي الشعر وتوقف تساقطه"
       },
       {
         "name": "صابونة زيت الغار",
@@ -291,15 +293,47 @@
       {
         "name": "صابونة دهن العود",
         "image": "assets/soap-oud.jpg",
-        "price": 5
+        "price": 5,
+        "description": "معطرة ومنعمة للجلد"
       },
       {
         "name": "صابونة قشر الرمان",
         "image": "assets/soap-pomegranate.jpg",
+        "price": 5,
+        "description": "تبييض الأماكن الحساسة"
+      },
+      {
+        "name": "صابونة البرتقال",
+        "description": "مشبعة ب الفيتامين ب",
+        "image": "assets/fb-img-1792242423857.jpg",
+        "price": 5
+      },
+      {
+        "name": "صابونة الصبير",
+        "description": "مهدئة للحروق",
+        "image": "assets/fb-img-1792242449606.jpg",
+        "price": 5
+      },
+      {
+        "name": "صابونة البحر الميت",
+        "description": "تزيل دهون البشرة الزائدة",
+        "image": "assets/fb-img-1792242427660.jpg",
+        "price": 5
+      },
+      {
+        "name": "صابونة الشاي الاخضر",
+        "description": "تخلص البشرة من الجفاف",
+        "image": "assets/fb-img-1792242452425.jpg",
+        "price": 5
+      },
+      {
+        "name": "صابونة الكركم",
+        "description": "تخفف من آثار حب الشباب",
+        "image": "assets/img-20260425-wa0050.jpg",
         "price": 5
       }
     ],
-    "image": "assets/category-soap.png",
+    "image": "assets/fb-img-1791971376196.jpg",
     "imagePosition": "center 55%"
   },
   {
