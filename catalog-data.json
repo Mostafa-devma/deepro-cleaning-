@@ -6,7 +6,54 @@
     "color": "#e3eef0",
     "accent": "#447985",
     "icon": "spark",
-    "products": [],
+    "products": [
+      {
+        "name": "قاهر التكلسات",
+        "description": "مزيل التكلسات والصدأ",
+        "image": "assets/image-e4aaa584.jpg",
+        "price": null
+      },
+      {
+        "name": "قاهر التكلسات",
+        "description": "مزيل التكلسات والصدأ",
+        "image": "assets/screenshot-20261020-114118.jpg",
+        "price": null
+      },
+      {
+        "name": "Deep cleaning",
+        "description": "مزيل متعدد الوظائف",
+        "image": "assets/image-52f9d20e.jpg",
+        "price": null
+      },
+      {
+        "name": "ملمع الأسطح",
+        "description": "نتائج مبهرة",
+        "image": "assets/image-a00bb866.jpg",
+        "price": null
+      },
+      {
+        "name": "Deep cleaning",
+        "image": "assets/screenshot-20261020-113816.jpg",
+        "price": null
+      },
+      {
+        "name": "مزيل الضباب",
+        "image": "assets/image-edb308a3-2.jpg",
+        "price": null
+      },
+      {
+        "name": "صابون للتنظيف العميق",
+        "description": "نتائج مبهرة للصناعيين",
+        "image": "assets/image-cc4c173e.jpg",
+        "price": null
+      },
+      {
+        "name": "ملمع الأسطح",
+        "description": "متعدد الوظائف، البلاستيك، الخشب",
+        "image": "assets/image-221f105a.jpg",
+        "price": null
+      }
+    ],
     "image": "assets/category-professional.jpg",
     "imagePosition": "center 55%"
   },
