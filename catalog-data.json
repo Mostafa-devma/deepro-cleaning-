@@ -264,34 +264,10 @@
     "icon": "drop",
     "products": [
       {
-        "name": "عطر منزلي بخّاخ",
-        "image": "assets/home-fragrance-spray.png",
-        "price": 6,
-        "priceUnit": "للعبوة الواحدة",
-        "description": "عطر منزلي بخّاخ.",
-        "imageCaption": "صورة التشكيلة — اختر الرائحة عبر واتساب."
-      },
-      {
-        "name": "عطر منزلي بالأعواد",
-        "image": "assets/home-fragrance-reeds.png",
-        "price": 7,
-        "priceUnit": "للعبوة الواحدة",
-        "description": "عطر منزلي بالأعواد.",
-        "imageCaption": "صورة التشكيلة — اختر الرائحة عبر واتساب."
-      },
-      {
         "name": "عطورات عصام اللبان — 100 مل",
         "image": "assets/issam-labban-perfumes.png",
         "price": 10,
         "size": "100 مل",
-        "description": "عطورات عصام اللبان",
-        "imageCaption": "صورة التشكيلة — اختر الرائحة عبر واتساب."
-      },
-      {
-        "name": "عطورات عصام اللبان — 30 مل",
-        "image": "assets/issam-labban-perfumes.png",
-        "price": 5,
-        "size": "30 مل",
         "description": "عطورات عصام اللبان",
         "imageCaption": "صورة التشكيلة — اختر الرائحة عبر واتساب."
       },
@@ -308,6 +284,20 @@
         "price": 7,
         "priceUnit": "للعبوة الواحدة",
         "imageCaption": "صورة التشكيلة — اختر الرائحة عبر واتساب."
+      },
+      {
+        "name": "معطر جو",
+        "description": "عبوة الماكينات المعطرة",
+        "image": "assets/image-4f532d58.jpg",
+        "price": 1.7,
+        "priceDisplay": "1.70"
+      },
+      {
+        "name": "معطر جو Best clean",
+        "description": "روائح مميزة",
+        "image": "assets/image-cff16d56.jpg",
+        "price": 1.7,
+        "priceDisplay": "1.70"
       }
     ],
     "image": "assets/category-fragrances.png",
