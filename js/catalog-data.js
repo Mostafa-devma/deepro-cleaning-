@@ -273,11 +273,12 @@ const categories=[
         "imageCaption": "صورة التشكيلة — اختر الرائحة عبر واتساب."
       },
       {
-        "name": "معطّر حبيبات بلاك أودور",
+        "name": "معطّر حبيبات Black odor",
         "image": "assets/fragrance-beads-black-odor.png",
         "price": 6,
         "priceUnit": "للعبوة الواحدة",
-        "imageCaption": "صورة التشكيلة — اختر الرائحة عبر واتساب."
+        "imageCaption": "صورة التشكيلة — اختر الرائحة عبر واتساب.",
+        "description": "الحمامات والسيارات"
       },
       {
         "name": "معطّر سيارات بلاك أودور",
@@ -299,6 +300,18 @@ const categories=[
         "image": "assets/image-cff16d56.jpg",
         "price": 1.7,
         "priceDisplay": "1.70"
+      },
+      {
+        "name": "Home spray",
+        "description": "منتجات حمزة اللبان",
+        "image": "assets/image-3bebcc1d.jpg",
+        "price": 6
+      },
+      {
+        "name": "Defreezers Black odor",
+        "description": "روائح معطرة خمس نجوم",
+        "image": "assets/image-997f5a08.jpg",
+        "price": 7
       }
     ],
     "image": "assets/category-fragrances.png",
