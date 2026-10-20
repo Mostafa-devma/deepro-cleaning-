@@ -2,13 +2,14 @@
 const categories=[
   {
     "id": "professional",
-    "title": "أدوية التنظيف الاحترافية",
+    "title": "نتائج مبهرة",
     "description": "حلول لمشاكل التنظيف الصعبة والعناية بالأسطح والأقمشة.",
     "color": "#e3eef0",
     "accent": "#447985",
     "icon": "spark",
     "products": [],
-    "image": "assets/category-professional.jpg"
+    "image": "assets/category-professional.jpg",
+    "imagePosition": "center 55%"
   },
   {
     "id": "daily",
