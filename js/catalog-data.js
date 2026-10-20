@@ -397,13 +397,6 @@ const categories=[
     "icon": "spark",
     "products": [
       {
-        "name": "إسفنج جلي Arix Splendelli",
-        "image": "assets/sponge-arix.jpg",
-        "price": 1,
-        "size": "عبوة من قطعتين",
-        "priceUnit": "للعبوة (قطعتان)"
-      },
-      {
         "name": "إسفنج جلي Casalina الملوّن",
         "image": "assets/sponge-casalina-multicolor.jpg",
         "price": 3,
@@ -411,35 +404,37 @@ const categories=[
         "priceUnit": "للعبوة (3 قطع)"
       },
       {
-        "name": "إسفنج جلي Casalina الأصفر والأخضر",
-        "image": "assets/sponge-casalina-yellow-green.jpg",
-        "price": 0.7,
-        "priceDisplay": "0.70",
-        "size": "عبوة من قطعتين",
-        "priceUnit": "للعبوة (قطعتان)"
-      },
-      {
-        "name": "سيف جلي Casalina Inox — 4 قطع",
-        "image": "assets/scourer-inox-4pcs.jpg",
+        "name": "اسفنج الجلي",
+        "description": "مجموعة كبيرة من إسفنج الجلي",
+        "image": "assets/image-afbf5a75.jpg",
         "price": null
       },
       {
-        "name": "سيف جلي Casalina مقطّع — 8 قطع",
-        "image": "assets/scourer-steelwool-8pcs.jpg",
+        "name": "سيف للجلي",
+        "description": "مجموعة كبيرة ومتنوعة من سيف الجلي",
+        "image": "assets/image-1ce4c3a8.jpg",
         "price": null
       },
       {
-        "name": "سيف جلي Casalina Inox — قطعتان",
-        "image": "assets/scourer-inox-2pcs.jpg",
+        "name": "مايكروفايبر",
+        "description": "مجموعة من شقف مايكروفيبر عالية الجودة",
+        "image": "assets/image-135bdad1.jpg",
         "price": null
       },
       {
-        "name": "سيف جلي Casalina Inox XL — 40 غرام",
-        "image": "assets/scourer-inox-xl-40g.jpg",
+        "name": "مجموعة التنظيف",
+        "description": "منتجات متنوعة عالية الجودة",
+        "image": "assets/image-36741909.jpg",
+        "price": null
+      },
+      {
+        "name": "Dusters",
+        "description": "مجموعة من منافض الغبار ومنظفات الزجاج",
+        "image": "assets/image-ae747ae0.jpg",
         "price": null
       }
     ],
-    "image": "assets/category-tools.png",
+    "image": "assets/image-2952ed9a.jpg",
     "imagePosition": "center 55%"
   },
   {
