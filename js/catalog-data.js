@@ -259,7 +259,7 @@ const categories=[
   {
     "id": "fragrances",
     "title": "العطور والمعطّرات",
-    "description": "للجو، وللاستخدام الشخصي، وللحمّامات والسيارات.",
+    "description": "Air freshener and personal care",
     "color": "#eeeae1",
     "accent": "#8b7956",
     "icon": "drop",
@@ -314,8 +314,8 @@ const categories=[
         "price": 7
       }
     ],
-    "image": "assets/category-fragrances.png",
-    "imagePosition": "center 60%"
+    "image": "assets/image-45496c9d.jpg",
+    "imagePosition": "center 55%"
   },
   {
     "id": "soap",
