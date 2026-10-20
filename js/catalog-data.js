@@ -441,7 +441,39 @@ const categories=[
     "id": "section-10",
     "title": "معدات تنظيف إحترافية",
     "description": "معدات عالية الجودة ومكفولة",
-    "products": [],
-    "imagePosition": "center 55%"
+    "products": [
+      {
+        "name": "ممسحة x shape",
+        "description": "سهلة العصر ، عالية الجودة",
+        "image": "assets/img-20260718-wa0058.jpg",
+        "price": null
+      },
+      {
+        "name": "Flat duster",
+        "description": "رفيعة، تنحني بسهولة للتنظيف تحت الكنب",
+        "image": "assets/img-20260718-wa0067.jpg",
+        "price": null
+      },
+      {
+        "name": "Turbo mop",
+        "description": "ممسحة مع سطل دوار للتنشيف السهل",
+        "image": "assets/img-20260718-wa0035-2.jpg",
+        "price": null
+      },
+      {
+        "name": "Mopping",
+        "description": "ممسحة مع شفرات تنظيف",
+        "image": "assets/img-20260718-wa0066.jpg",
+        "price": null
+      },
+      {
+        "name": "Mop master kit",
+        "description": "ممسحة وقحاطة وعصا طويلة",
+        "image": "assets/img-20260718-wa0054.jpg",
+        "price": null
+      }
+    ],
+    "imagePosition": "center 55%",
+    "image": "assets/img-20260718-wa0035.jpg"
   }
 ];
