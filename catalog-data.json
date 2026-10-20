@@ -470,6 +470,36 @@
         "description": "ممسحة وقحاطة وعصا طويلة",
         "image": "assets/img-20260718-wa0054.jpg",
         "price": null
+      },
+      {
+        "name": "ممسحة مع سطل",
+        "description": "سطل مع جرنين",
+        "image": "assets/fb-img-1783205396476.jpg",
+        "price": null
+      },
+      {
+        "name": "مكنسة ومجرود وسطل",
+        "description": "عالية الجودة ومكفولة على سنتين",
+        "image": "assets/img-20260706-165612-293.jpg",
+        "price": null
+      },
+      {
+        "name": "Mop pro",
+        "description": "امتصاص سريع ،مكفولة على سنتين",
+        "image": "assets/fb-img-1783205356260.jpg",
+        "price": null
+      },
+      {
+        "name": "Mopro u-shop",
+        "description": "٣ الوان ، ممسحة مع سطل مكفولين",
+        "image": "assets/img-20260629-wa0087.jpg",
+        "price": null
+      },
+      {
+        "name": "ممسحة  Majic clean",
+        "description": "ممسحة ناعمة ومع شرشوبة",
+        "image": "assets/image-cbc5078c.jpg",
+        "price": null
       }
     ],
     "imagePosition": "center 55%",
