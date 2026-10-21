@@ -333,7 +333,8 @@ const categories=[
         "priceDisplay": "7.80"
       }
     ],
-    "imagePosition": "center 55%"
+    "imagePosition": "center 55%",
+    "image": "assets/image-ccc65717-2.jpg"
   },
   {
     "id": "fragrances",
