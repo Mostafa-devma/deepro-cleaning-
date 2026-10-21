@@ -286,7 +286,52 @@
     "id": "section-8",
     "title": "منظفات الأسطح وتلميعها",
     "description": "منظفات الأرضيات ومعطراتها، منظف الزجاج، مانع الضباب، ملمع الخشب والبلاستيك، مزيل صدأ الحديد .",
-    "products": [],
+    "products": [
+      {
+        "name": "مزيل اصفرار أضواء السيارات",
+        "priceUnit": "16",
+        "image": "assets/image-14c2edb3.jpg",
+        "price": null
+      },
+      {
+        "name": "ملمع الاسطح",
+        "description": "ملمع ، البلاستيك،الخشب،الجلد الحديد",
+        "image": "assets/image-c42cfa6f.jpg",
+        "price": 8
+      },
+      {
+        "name": "منظف وملمع الزجاج",
+        "image": "assets/image-f622d99e.jpg",
+        "price": 2
+      },
+      {
+        "name": "منظف الأحذية من Jamrex",
+        "description": "الاحذية الجلدية والقماش",
+        "image": "assets/image-89f7b42d.jpg",
+        "price": 10
+      },
+      {
+        "name": "مانع الضباب",
+        "size": "60 ml",
+        "image": "assets/mai-image-2-6-image-edit-a.jpg",
+        "price": 7
+      },
+      {
+        "name": "منظف ومعطر ارض Elvera",
+        "size": "3 litre",
+        "image": "assets/image-ccc65717.jpg",
+        "price": 4.5,
+        "priceDisplay": "4.50"
+      },
+      {
+        "name": "منظف  ومعطر ارض من Jamrex",
+        "description": "ثقيل يخلط بماء",
+        "size": "3 litre",
+        "image": "assets/image-7c747159.jpg",
+        "price": 7.8,
+        "priceDisplay": "7.80"
+      }
+    ],
     "imagePosition": "center 55%"
   },
   {
