@@ -291,13 +291,6 @@ const categories=[
     "imagePosition": "center 55%"
   },
   {
-    "id": "section-9",
-    "title": "العناية بالمفروشات والسيارات والأحذية",
-    "description": "منظف الكنب والسجاد والأقمشة، مزيلات البقع، مزيل اصفرار المصابيح، منظفات الاحذية",
-    "products": [],
-    "imagePosition": "center 55%"
-  },
-  {
     "id": "fragrances",
     "title": "العطور والمعطّرات",
     "description": "Air freshener and personal care",
