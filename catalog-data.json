@@ -236,10 +236,27 @@
   },
   {
     "id": "section-7",
-    "title": "منظفات الحمامات وإزالة لترسبات",
+    "title": "منظفات الحمامات وإزالة الترسبات",
     "description": "مزيل التكلسات، مزيل العفن، مزيل الصدأ، تجهيزات الحمامات",
-    "products": [],
-    "imagePosition": "center 55%"
+    "products": [
+      {
+        "name": "مزيل الكلس والصدأ",
+        "description": "قاهر التكلسات، منظف النحاسيات والفضيات والنيكل.",
+        "size": "500 ml",
+        "image": "assets/image-2da060bf.jpg",
+        "price": 7
+      },
+      {
+        "name": "Dalli home",
+        "description": "منظف مراحيض المطبخ والحنفيات ورؤوس الدوش وحوض الاستحمام",
+        "size": "750 ml",
+        "image": "assets/image-89bdc001.jpg",
+        "price": 2.2,
+        "priceDisplay": "2.20"
+      }
+    ],
+    "imagePosition": "center 55%",
+    "image": "assets/image-56b6fff0.jpg"
   },
   {
     "id": "section-8",
