@@ -253,6 +253,30 @@
         "image": "assets/image-89bdc001.jpg",
         "price": 2.2,
         "priceDisplay": "2.20"
+      },
+      {
+        "name": "منظف عام Jamrex",
+        "size": "1 Litre",
+        "image": "assets/img-20260427-wa0048-0.jpg",
+        "price": 5
+      },
+      {
+        "name": "مزيل الصدأ من Jamrex",
+        "description": "مزيل صدأ الحديد والأدوات الصناعية",
+        "size": "500 ml",
+        "image": "assets/image-f0ca8e42.jpg",
+        "price": 12
+      },
+      {
+        "name": "فاتح المجاري",
+        "image": "assets/image-7406bdbb-1.jpg",
+        "price": 3
+      },
+      {
+        "name": "The pink magic",
+        "description": "مزيل جميع انواع الدهون والتكلسات",
+        "image": "assets/image-fbadb6db.jpg",
+        "price": 5
       }
     ],
     "imagePosition": "center 55%",
