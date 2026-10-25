@@ -519,7 +519,7 @@ a.c-card:hover{transform:translateY(-4px);border-color:#a9c9ec}
   .head-tools{gap:8px}
   .icon-btn{width:44px;height:44px}
   .site-nav{padding:10px 16px 20px}
-  .hero-grid{padding-top:36px;padding-bottom:96px;gap:48px}
+  .hero-grid{padding-top:36px;padding-bottom:124px;gap:48px}
   .hero h1{font-size:38px}
   .bubbles span:nth-child(1),.bubbles span:nth-child(3){display:none}
   .hero .lead{font-size:17px}
@@ -573,5 +573,11 @@ a.c-card:hover{transform:translateY(-4px);border-color:#a9c9ec}
   .toast{bottom:86px}
 }
 
-/* home hero without the picture */
-.hero-grid.solo{grid-template-columns:1fr;max-width:900px;padding-bottom:110px}
+/* home hero picture: framed photo over a slowly turning glow */
+.hero-visual .glow{position:absolute;inset:-9%;z-index:0;border-radius:50%;background:conic-gradient(from 0deg,rgba(21,114,232,.42),rgba(25,194,201,.38),rgba(21,114,232,.06),rgba(25,194,201,.3),rgba(21,114,232,.42));filter:blur(42px);animation:spin 16s linear infinite;pointer-events:none}
+@keyframes spin{to{transform:rotate(360deg)}}
+.hero-visual .photo{position:relative;z-index:1;border:7px solid #fff;border-radius:34px;box-shadow:0 50px 90px -34px rgba(10,37,64,.55),0 0 0 1px rgba(21,114,232,.12);animation:bob 7s ease-in-out infinite}
+@keyframes bob{0%,100%{transform:rotate(-2.5deg) translateY(0)}50%{transform:rotate(-2.5deg) translateY(-14px)}}
+.hero-visual .photo img{border-radius:27px}
+.hero-visual .photo:after{content:"";position:absolute;inset:0;border-radius:27px;background:linear-gradient(105deg,transparent 38%,rgba(255,255,255,.55) 50%,transparent 62%);transform:translateX(130%);animation:sweep 1.8s cubic-bezier(.3,.6,.2,1) .6s both;pointer-events:none}
+@keyframes sweep{from{transform:translateX(130%)}to{transform:translateX(-130%)}}
